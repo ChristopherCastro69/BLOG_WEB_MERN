@@ -35,7 +35,7 @@ const Singlepost = () => {
                 dignissimos exercitationem corporis in itaque corrupti incidunt.
             </p>
         </div>
-        Singlepost
+
 
         </div>
   )

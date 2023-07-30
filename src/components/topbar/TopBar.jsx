@@ -1,30 +1,58 @@
-import "./topbar.css"
+import { Link } from "react-router-dom";
+import "./topbar.css";
 
-export default function TopBar() {
+export default function Topbar() {
+  const user = false;
   return (
-    <div className='top'>
+    <div className="top">
       <div className="topLeft">
-      <i className="topIcon fa-brands fa-square-facebook"></i>
-      <i className="topIcon fa-brands fa-square-github"></i>
-      <i className="topIcon fa-brands fa-linkedin"></i>
+        <i className="topIcon fab fa-facebook-square"></i>
+        <i className="topIcon fab fa-instagram-square"></i>
+        <i className="topIcon fab fa-pinterest-square"></i>
+        <i className="topIcon fab fa-twitter-square"></i>
       </div>
       <div className="topCenter">
         <ul className="topList">
-            <li className="topListItem">HOME</li>
-            <li className="topListItem">ABOUT</li>
-            <li className="topListItem">CONTACT</li>
-            <li className="topListItem">ADD</li>
-            <li className="topListItem">LOGOUT</li>
+          <li className="topListItem">
+            <Link className="link" to="/">
+              HOME
+            </Link>
+          </li>
+          <li className="topListItem">ABOUT</li>
+          <li className="topListItem">CONTACT</li>
+          <li className="topListItem">
+            <Link className="link" to="/write">
+              WRITE
+            </Link>
+          </li>
+          {user && <li className="topListItem">LOGOUT</li>}
         </ul>
       </div>
       <div className="topRight">
-        <img
-        className="topImg" 
-        src="https://media.licdn.com/dms/image/C5103AQGZqFUC9VU-RQ/profile-displayphoto-shrink_200_200/0/1576383078762?e=1695859200&v=beta&t=OceZxhfLFEB7SAiMFDet0dY1nl_5zg9gNZ0DD7_HBTU" 
-        alt="" />
-        <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
+        {user ? (
+          <Link className="link" to="/settings">
+            <img
+              className="topImg"
+              src="https://media.licdn.com/dms/image/C5103AQGZqFUC9VU-RQ/profile-displayphoto-shrink_200_200/0/1576383078762?e=1695859200&v=beta&t=OceZxhfLFEB7SAiMFDet0dY1nl_5zg9gNZ0DD7_HBTU"
+              alt=""
+            />
+          </Link>
+        ) : (
+          <ul className="topList">
+            <li className="topListItem">
+              <Link className="link" to="/login">
+                LOGIN
+              </Link>
+            </li>
+            <li className="topListItem">
+              <Link className="link" to="/register">
+                REGISTER
+              </Link>
+            </li>
+          </ul>
+        )}
+        <i className="topSearchIcon fas fa-search"></i>
       </div>
-
     </div>
-  )
+  );
 }
