@@ -34,7 +34,7 @@ const TopBar = () => {
         <Link className="link" to="/settings">
           <img
             className="topImg"
-            src="https://media.licdn.com/dms/image/C5103AQGZqFUC9VU-RQ/profile-displayphoto-shrink_200_200/0/1576383078762?e=1695859200&v=beta&t=OceZxhfLFEB7SAiMFDet0dY1nl_5zg9gNZ0DD7_HBTU"
+            src="images/pp2.jfif"
             alt=""
           />
         </Link>
