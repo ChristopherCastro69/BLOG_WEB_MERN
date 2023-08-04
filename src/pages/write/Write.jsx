@@ -2,6 +2,7 @@ import React from 'react'
 import "./write.css"
 
 const Write = () => {
+  
   return (
     <div className='write'>
         <img
