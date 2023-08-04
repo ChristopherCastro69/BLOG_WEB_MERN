@@ -4,17 +4,18 @@ import Sidebar from '../../components/sidebar/Sidebar'
 import Posts from '../../components/posts/Posts'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { useLocation } from 'react-router-dom'
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
+  const {search} = useLocation();
+  
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/posts');
-        const data = response.data; // The response data sent by the server
-        console.log(data); // Display the response data in the console or do something else with it
-        // setPosts(data); // Update the state with the fetched data
+        const res = await axios.get("/posts" + search);
+        setPosts(res.data)
       } catch (error) {
         if (error.response) {
           // The request was made, but the server responded with a non-2xx status code
@@ -30,7 +31,8 @@ const Home = () => {
     };
 
     fetchPosts();
-  }, []);
+  
+  }, [search]);
 
   return (
     <>

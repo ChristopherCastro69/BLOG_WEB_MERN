@@ -14,7 +14,7 @@ const Settings = () => {
         <form className="settingsForm">
           <label> Profile Picture</label>
           <div className="settingsPP">
-            <img src="images/pp2.jfif" 
+            <img src="https://media.licdn.com/dms/image/C5103AQGZqFUC9VU-RQ/profile-displayphoto-shrink_200_200/0/1576383078762?e=1696464000&v=beta&t=TShU8vwUlfZEogaPlrJhEb6xQnQIToJEcwYFYp0B3P0" 
                  alt="" />
             <label htmlFor="fileInput">
             <i className="settingsPPIcon fa-regular fa-circle-user"></i>

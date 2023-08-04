@@ -3,14 +3,14 @@ import "./topbar.css";
 import React from 'react'
 
 const TopBar = () => {
-  const user = true
+  const user = false
   return (
     <div className="top">
     <div className="topLeft">
-      <i className="topIcon fab fa-facebook-square"></i>
-      <i className="topIcon fab fa-instagram-square"></i>
-      <i className="topIcon fab fa-pinterest-square"></i>
-      <i className="topIcon fab fa-twitter-square"></i>
+      <i className="topIcon fab fa-github"></i>
+      <i className="topIcon fab fa-facebook"></i>
+      <i className="topIcon fab fa-linkedin"></i>
+
     </div>
     <div className="topCenter">
       <ul className="topList">
@@ -34,7 +34,7 @@ const TopBar = () => {
         <Link className="link" to="/settings">
           <img
             className="topImg"
-            src="images/pp2.jfif"
+            src="https://media.licdn.com/dms/image/C5103AQGZqFUC9VU-RQ/profile-displayphoto-shrink_200_200/0/1576383078762?e=1696464000&v=beta&t=TShU8vwUlfZEogaPlrJhEb6xQnQIToJEcwYFYp0B3P0"
             alt=""
           />
         </Link>

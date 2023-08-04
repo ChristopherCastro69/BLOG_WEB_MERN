@@ -1,17 +1,14 @@
-import React from 'react'
-import "./posts.css"
-import Posted from "../posted/Posted"
-  
-const Posts = () => {
-  return (
-    <div className='posts'>
-      <Posted img="https://lite16.com/blog/wp-content/uploads/2022/07/web-analytics-1536x768.png"/>
-      <Posted img="https://lite16.com/blog/wp-content/uploads/2022/07/web-analytics-1536x768.png"/>
-      <Posted img="https://lite16.com/blog/wp-content/uploads/2022/07/web-analytics-1536x768.png"/>
-      <Posted img="https://lite16.com/blog/wp-content/uploads/2022/07/web-analytics-1536x768.png"/>
-    
-    </div>
-  )
-}
+import React from 'react';
+import Posted from '../posted/Posted';
 
-export default Posts
+const Posts = ({ posts }) => {
+  return (
+    <div className="posts">
+      {posts.map((post) => (
+        <Posted key={post._id} post={post} />
+      ))}
+    </div>
+  );
+};
+
+export default Posts;
